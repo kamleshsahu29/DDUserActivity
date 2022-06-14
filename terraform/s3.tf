@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "kfS3Bucket" {
-  bucket_prefix = "dareData-test-"
+resource "aws_s3_bucket" "kfs3bucket" {
+  bucket_prefix = "daredatatest"
 
   tags = {
     Name = "User Activity"
@@ -7,8 +7,8 @@ resource "aws_s3_bucket" "kfS3Bucket" {
   }
 }
 
-resource "aws_s3_bucket_acl" "kfS3BucketACL" {
+resource "aws_s3_bucket_acl" "kfd3bucket-acl" {
   
-  bucket = aws_s3_bucket.kfS3Bucket.id
+  bucket = aws_s3_bucket.kfs3bucket.id
   acl = "private"
 }

@@ -25,9 +25,10 @@ resource "aws_route_table_association" "dd-crt-subnet" {
 resource "aws_security_group" "dd-securitygroup" {
 	
 	vpc_id = "${aws_vpc.dd-vpc.id}"
+	
 	egress {
 		from_port = 0
-		to_port = 0
+		to_port = 65535
 		protocol = "tcp"
 		cidr_blocks = ["0.0.0.0/0"]
 

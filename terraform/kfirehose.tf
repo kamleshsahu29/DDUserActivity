@@ -4,7 +4,7 @@ resource "aws_kinesis_firehose_delivery_stream" "dd-kf-profile" {
 
  s3_configuration {
    role_arn = "${aws_iam_role.firehose-stream-role.arn}"
-   bucket_arn= "${aws_s3_bucket.kfS3Bucket.arn}"
+   bucket_arn= "${aws_s3_bucket.kfs3bucket.arn}"
    buffer_size = 10
    buffer_interval = 400
    compression_format = "ZIP"
@@ -17,7 +17,7 @@ resource "aws_kinesis_firehose_delivery_stream" "dd-kf-track" {
 
  s3_configuration {
    role_arn = "${aws_iam_role.firehose-stream-role.arn}"
-   bucket_arn= "${aws_s3_bucket.kfS3Bucket.arn}"
+   bucket_arn= "${aws_s3_bucket.kfs3bucket.arn}"
    buffer_size = 10
    buffer_interval = 400
    compression_format = "ZIP"
@@ -31,7 +31,7 @@ resource "aws_kinesis_firehose_delivery_stream" "dd-kf-alias" {
 
  s3_configuration {
    role_arn = "${aws_iam_role.firehose-stream-role.arn}"
-   bucket_arn= "${aws_s3_bucket.kfS3Bucket.arn}"
+   bucket_arn= "${aws_s3_bucket.kfs3bucket.arn}"
    buffer_size = 10
    buffer_interval = 400
    compression_format = "ZIP"
