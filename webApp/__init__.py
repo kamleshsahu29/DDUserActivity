@@ -8,7 +8,7 @@ aliasStream = "dd-kf-alias"
 trackStream = "dd-kf-track"
 kinesis_client = boto3.client('firehose')
 cherrypy.config.update({'server.socket_host': '0.0.0.0'})
-cherrypy.config.update({'server.socket_port': 80})
+cherrypy.config.update({'server.socket_port': 1028})
 
 
 class UserActivity(object):
