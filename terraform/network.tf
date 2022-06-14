@@ -42,6 +42,14 @@ resource "aws_security_group" "dd-securitygroup" {
 		cidr_blocks = ["0.0.0.0/0"]
 	}
 
+	ingress {
+
+		from_port = 1028
+		to_port = 1028
+		protocol = "tcp"
+		cidr_blocks = ["0.0.0.0/0"]
+	}
+
 
 	ingress {
 		from_port = 22
