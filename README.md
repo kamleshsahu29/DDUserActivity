@@ -13,11 +13,11 @@ Clone this repository.
 # Step 2: Manual changes  
 updates to ./terraform/userData/webAppInit.sh.  
   
-export AWS_ACCESS_KEY_ID= **<aws_access_key>**
+  export AWS_ACCESS_KEY_ID= **<aws_access_key>**
 
-export AWS_SECRET_ACCESS_KEY= **<aws_secret_access_key>**
+  export AWS_SECRET_ACCESS_KEY= **<aws_secret_access_key>**
 
-export AWS_DEFAULT_REGION= **<aws_region>**
+  export AWS_DEFAULT_REGION= **<aws_region>**
 
 save file. 
 
@@ -32,7 +32,7 @@ ipaddress for webserver is displayed on terraform completion.
 json data can be posted to following endpoints:  
 **ipaddr:1028/profile**. 
 
-  Mandatory field names:  
+    Mandatory field names:  
     userId:  
     attributes:  
     timeStampUTC:  
@@ -45,7 +45,7 @@ json data can be posted to following endpoints:
   
 **ipaddr:1028/alias**. 
 
-  Mandatory field names:  
+    Mandatory field names:  
     newUserId:  
     orignialUserId:  
     timeStampUTC:  
